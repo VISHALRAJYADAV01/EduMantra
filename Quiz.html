@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        
+        .quiz-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        
+        .quiz-section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .quiz-section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        .options {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            background-color: #e7e7e7;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #d0d0d0;
+        }
+
+        .option input {
+            margin-right: 10px;
+        }
+
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quiz</h1>
+
+    <div class="quiz-container">
+
+        
+        <div class="quiz-section">
+            <h2>Web Development Quiz</h2>
+
+        
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="html" value="1"> HyperText Markup Language
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="html" value="2"> Hyper Transfer Markup Language
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="html" value="3"> Home Tool Markup Language
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. What is the purpose of CSS?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="css" value="1"> To style HTML elements
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="css" value="2"> To make websites interactive
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="css" value="3"> To create server-side logic
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. Which CSS property is used to change the background color of an element?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="css_color" value="1"> background-color
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="css_color" value="2"> color
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="css_color" value="3"> background-image
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. What does "DOM" stand for?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="dom" value="1"> Document Object Model
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="dom" value="2"> Direct Object Manipulation
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="dom" value="3"> Document Online Model
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Which tag is used to create a hyperlink in HTML?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="link_tag" value="1"> &lt;a&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="link_tag" value="2"> &lt;link&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="link_tag" value="3"> &lt;url&gt;
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. How can you make a text bold in CSS?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="bold" value="1"> font-weight: bold;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="bold" value="2"> font-style: bold;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="bold" value="3"> text-style: bold;
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Which HTML element is used to define an internal style sheet?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="style_tag" value="1"> &lt;style&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="style_tag" value="2"> &lt;script&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="style_tag" value="3"> &lt;link&gt;
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. What is the correct HTML for inserting an image?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="img_tag" value="1"> &lt;img src="image.jpg"&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="img_tag" value="2"> &lt;image src="image.jpg"&gt;
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="img_tag" value="3"> &lt;img href="image.jpg"&gt;
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Which attribute is used to specify the URL of a linked document in HTML?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="url_attribute" value="1"> href
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="url_attribute" value="2"> link
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="url_attribute" value="3"> source
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. How can you select an element by its class in CSS?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="class_selector" value="1"> .class-name
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="class_selector" value="2"> #class-name
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="class_selector" value="2"> class-name
+                    </label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="quiz-section">
+            <h2>Data Science Quiz</h2>
+
+        
+            <div class="question">
+                <p>1. What is the primary purpose of the Pandas library in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="pandas" value="1"> Data manipulation and analysis
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="pandas" value="2"> Machine learning models
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="pandas" value="3"> Data visualization
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Which of the following is a valid way to import the Pandas library in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="import_pandas" value="1"> import pandas as pd
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="import_pandas" value="2"> import pandas
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="import_pandas" value="3"> import numpy as np
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. What does the iloc function do in Pandas?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="iloc" value="1"> Selects data by integer position
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="iloc" value="2"> Selects data by column name
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="iloc" value="3"> Returns the number of rows in a DataFrame
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. Which of these is used for handling missing data in Pandas?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="missing_data" value="1"> fillna()
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="missing_data" value="2"> replace()
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="missing_data" value="3"> dropna()
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What is the primary purpose of the groupby() function in Pandas?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="groupby" value="1"> To group data by a particular column
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="groupby" value="2"> To calculate the mean of a column
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="groupby" value="3"> To drop duplicate values from a column
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the purpose of the matplotlib library in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="matplotlib" value="1"> To visualize data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="matplotlib" value="2"> To preprocess data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="matplotlib" value="3"> To create machine learning models
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What function in Pandas is used to read a CSV file into a DataFrame?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="read_csv" value="1"> pd.read_csv()
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="read_csv" value="2"> pd.load_csv()
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="read_csv" value="3"> pd.import_csv()
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. In machine learning, what is an overfitting model?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="overfitting" value="1"> A model that performs well on training data but poorly on new data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="overfitting" value="2"> A model that performs poorly on both training and new data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="overfitting" value="3"> A model that performs well on new data but poorly on training data
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. What is the purpose of the fit() function in machine learning models?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="fit_function" value="1"> To train the model with data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="fit_function" value="2"> To test the model on new data
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="fit_function" value="3"> To visualize the model's performance
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. Which library is most commonly used for machine learning in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="ml_library" value="1"> scikit-learn
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="ml_library" value="2"> matplotlib
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="ml_library" value="3"> seaborn
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-section">
+            <h2>Python Quiz</h2>
+
+            
+            <div class="question">
+                <p>1. What does self refer to in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="self" value="1"> The instance of the class
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="self" value="2"> A method inside a class
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="self" value="3"> A global variable
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. What is the correct syntax to define a function in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="function" value="1"> def function_name():
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="function" value="2"> function function_name():
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="function" value="3"> define function_name():
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. How can you check the type of a variable in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="type_check" value="1"> type(variable)
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="type_check" value="2"> check(variable)
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="type_check" value="3"> typeof(variable)
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. What is a list comprehension in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="list_comprehension" value="1"> A concise way to create lists
+                    </label>
+                    <label class="option">
+                        <input type="radio" name<input type="radio" name="list_comprehension" value="2"> A way to iterate over lists using a loop
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="list_comprehension" value="3"> A method to define a list inside a function
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. What does the break statement do in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="break_statement" value="1"> Exits the current loop
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="break_statement" value="2"> Stops the function from executing
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="break_statement" value="3"> Pauses the program for a moment
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What is the output of print(2 ** 3) in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="power_operator" value="1"> 8
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="power_operator" value="2"> 6
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="power_operator" value="3"> 5
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. What is the result of len('Hello') in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="string_len" value="1"> 5
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="string_len" value="2"> 6
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="string_len" value="3"> 4
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. How do you create a dictionary in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="dictionary" value="1"> my_dict = {'key': 'value'}
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="dictionary" value="2"> my_dict = ['key', 'value']
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="dictionary" value="3"> my_dict = ('key', 'value')
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. What is a lambda function in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="lambda_function" value="1"> A small anonymous function
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="lambda_function" value="2"> A function with multiple parameters
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="lambda_function" value="3"> A function with no return value
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the correct way to import a module in Python?</p>
+                <div class="options">
+                    <label class="option">
+                        <input type="radio" name="import_module" value="1"> import module_name
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="import_module" value="2"> include module_name
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="import_module" value="3"> require module_name
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="submit-btn-container">
+            <button class="submit-btn" onclick="alert('Quiz submitted successfully!')">Submit Quiz</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

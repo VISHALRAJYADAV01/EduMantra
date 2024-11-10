@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input, select, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .submit-btn {
+            padding: 14px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #003366;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #0055a5;
+        }
+        .thank-you {
+            display: none;
+            text-align: center;
+            font-size: 1.2em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Enroll in Our Web Development Course</h1>
+        <p>Your journey to becoming a professional web developer starts here!</p>
+    </header>
+
+    <div class="container">
+        <h2>Enrollment Form</h2>
+        <form id="enrollmentForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="course">Select Course</label>
+            <select id="course" name="course" required>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="python">Python Programming</option>
+            </select>
+            
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter any questions or comments"></textarea>
+            
+            <button type="submit" class="submit-btn">Submit Enrollment</button>
+        </form>
+
+        <div class="thank-you">
+            <p>Thank you for enrolling! You will be redirected to the payment page shortly.</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('enrollmentForm');
+        const thankYouMessage = document.querySelector('.thank-you');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            // Display the "Thank You" message
+            thankYouMessage.style.display = 'block';
+
+            // After 3 seconds, redirect to the payment page
+            setTimeout(function () {
+                window.location.href = 'payment.html';  // Replace with your actual payment page URL
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

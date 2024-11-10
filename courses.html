@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <style>
+        .main{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1b5eb6;
+        }
+        header {
+            background-color: #534ee0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #444;
+            padding: 15px;
+            text-align: center;
+            
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 1.1em;
+            background-color: #666;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #999;
+        }
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .section-content div {
+            flex: 1 1 48%;
+            margin: 10px 0;
+        }
+        .section-content div img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-content div ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1em;
+        }
+        .section-content div ul li {
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .cta-btn:hover {
+            background-color: #0055a5;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Course Page</h1>
+        <p>Your journey to becoming a professional web developer starts here!</p>
+    </header>
+
+    <nav>
+        <a href="#course-overview">Course Overview</a>
+        <a href="#syllabus">Syllabus</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#enroll">Enroll Now</a>
+    </nav>
+
+    
+    <section id="course-overview">
+        <h2>Course Overview</h2>
+        <div class="section-content">
+            <div>
+                <p>This course will teach you all the essential skills needed to become a professional web developer. From front-end to back-end, you'll master HTML, CSS, JavaScript, and much more.</p>
+                <ul>
+                    <li>Interactive coding challenges</li>
+                    <li>Real-world projects</li>
+                    <li>Lifetime access to materials</li>
+                    <li>Personalized feedback</li>
+                </ul>
+            </div>
+            <div>
+                <img src="web dev.jpg" alt="Web Development">
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="syllabus">
+        <h2>Course Syllabus</h2>
+        <div class="section-content">
+            <div>
+                <ul>
+                    <li>Introduction to HTML & CSS</li>
+                    <li>JavaScript Basics</li>
+                    <li>Responsive Web Design</li>
+                    <li>Working with APIs</li>
+                    <li>Building Dynamic Websites with React</li>
+                    <li>Backend Development with Node.js</li>
+                    <li>Database Management with MongoDB</li>
+                    <li>Final Project: Build Your Portfolio</li>
+                </ul>
+            </div>
+            <div>
+                <img src="syllabus.jpg" alt="Course Syllabus">
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="instructor">
+        <h2>Meet the Instructor</h2>
+        <div class="section-content">
+            <div>
+                <p>Our instructor, John Doe, has over 10 years of experience in the tech industry. He has worked with top companies and mentored over 500 students in web development.</p>
+                <ul>
+                    <li>Founder of XYZ Technologies</li>
+                    <li>Lead Developer at ABC Corp.</li>
+                    <li>Experienced mentor with over 500 students</li>
+                </ul>
+            </div>
+            <div>
+                <img src="instructor3.jpg" alt="Instructor">
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="section-content">
+            <div>
+                <p>"This course was life-changing! I learned everything I needed to know to land my first developer job. The projects were super practical!"</p>
+                <p>-Raaz.</p>
+            </div>
+            <div>
+                <p>"The instructor was amazing, and the content was easy to follow. I now feel confident in building websites from scratch!"</p>
+                <p>-Harsh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enroll Now Section -->
+    <section id="enroll">
+        <h2>Enroll Now</h2>
+        <p>Don't miss out on this opportunity to kickstart your web development career!</p>
+        <a href="enroll.html" class="cta-btn">Enroll Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Web Development Mastery. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
